@@ -1,6 +1,6 @@
 ## Proyecto Final ##
 Consumimos la API de Rick y Morty
 ### Integrantes
-- Braulio 
+- Braulio Escobar
 - Renato Monroy
 - Juan Ochoa
