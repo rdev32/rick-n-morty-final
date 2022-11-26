@@ -1,0 +1,23 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+{% for item in characters %}
+
+    <div class="row">
+       <div class="col-md-4">
+           <div class="panel panel-default">
+            <div class="panel_body">
+                <a href="{{ url_for('character_router.profile', id=item._id)}}">
+                    <img src="{{ item.image_url }}" alt="{{ item.name }}">
+                    <p> {{ item.name }} <br> {{ item.alive }} {{ item.species }} </p>
+                    <p>Last known location: <br> {{ item.location_name }} </p>
+                    <p>First Seen in: <br> {{ item.episode }}</p>
+                </a>
+           </div>
+       </div>
+    </div>
+
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="card" style="max-width: 1000px !important; margin-left: auto !important; margin-right: auto !important;">
+      <img class="card-img-top" src={{pj_data.image_url}} alt="Card image cap">
+      <div class="card-body">
+          <h5 class="card-title">{{pj_data.name}}</h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">status: {{pj_data.alive}}</li>
+          <li class="list-group-item">species: {{pj_data.species}}</li>
+          <li class="list-group-item">type: {{ 'Alive' if pj_data.typo else 'Dead' }}</li>
+          <li class="list-group-item">gender: {{pj_data.gender}}</li>
+          <li class="list-group-item">origin: {{pj_data.origin}}</li>
+          <li class="list-group-item">location: {{pj_data.location_name}}</li>
+          <li class="list-group-item">First episode: {{pj_data.episode}}</li>
+          <li class="list-group-item">Number of episodes: {{pj_data.episode_n|length}}</li>
+          <li class="list-group-item">created: {{pj_data.created}}</li>
+          </ul>
+      </div>
+    </div>
+{% endblock %}
